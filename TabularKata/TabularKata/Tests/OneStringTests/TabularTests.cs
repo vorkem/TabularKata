@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace TabularKata
+namespace TabularKata.Tests.OneStringTests
 {
     [TestFixture]
     public class GivenAOneStringGuitar
