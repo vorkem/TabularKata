@@ -8,12 +8,12 @@ namespace TabularKata.Tests.OneStringTests
         [Test]
         public void WhenNoInputsAreSelectedThenNoStringsArePlayed()
         {
-            var subject = new Music();
-            subject.AddNote("-");
-            subject.AddNote("-");
-            subject.AddNote("-");
-            subject.AddNote("-");
-            subject.AddNote("-");
+            var subject = new Music(1);
+            subject.AddNote();
+            subject.AddNote();
+            subject.AddNote();
+            subject.AddNote();
+            subject.AddNote();
             var result = subject.Tabulate();
 
             Assert.That(result, Is.EqualTo("|-----|"));
@@ -22,12 +22,12 @@ namespace TabularKata.Tests.OneStringTests
         [Test]
         public void WhenTheSecondFretIsPlayedOnTheThirdBeatThenTheTabIsCorrect()
         {
-            var subject = new Music();
-            subject.AddNote("-");
-            subject.AddNote("-");
-            subject.AddNote("2");
-            subject.AddNote("-");
-            subject.AddNote("-");
+            var subject = new Music(1);
+            subject.AddNote();
+            subject.AddNote();
+            subject.AddNote(new PlayableNote {StringNumber=1, Fret = 2 });
+            subject.AddNote();
+            subject.AddNote();
             var result = subject.Tabulate();
 
             Assert.That(result, Is.EqualTo("|--2--|"));

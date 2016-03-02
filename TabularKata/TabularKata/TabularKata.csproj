@@ -45,8 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Music.cs" />
-    <Compile Include="TabularTests.cs" />
+    <Compile Include="Tests\OneStringTests\TabularTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\SixStringTests\StandardGuitarTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
